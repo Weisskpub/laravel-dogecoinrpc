@@ -1,0 +1,39 @@
+{
+    "name": "weisskpub/laravel-dogecoinrpc",
+    "description": "Dogecoin JSON-RPC Service Provider for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Weisskpub",
+            "email": "waild_net@mail.ru"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0",
+        "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*",
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "6.3.*"
+    },
+   "autoload": {
+       "psr-4" : {
+           "Weisskpub\\Dogecoin\\": "src/"
+       },
+       "files": [
+           "src/helpers.php"
+       ]
+   },
+   "extra": {
+       "laravel": {
+           "providers": [
+               "Weisskpub\\Dogecoin\\Providers\\ServiceProvider"
+           ]
+       },
+       "aliases": {
+           "Dogecoind": "Weisskpub\\Dogecoin\\Facade"
+       }
+   }
+}
